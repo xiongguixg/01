@@ -1,0 +1,5 @@
+.rdImg
+{ 
+  width: 100rpx;
+  height: 80rpx;
+}

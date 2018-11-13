@@ -1,0 +1,33 @@
+<view class='flexColumn  pageContailner'   >
+      <view class='flexRow  exemTypeContailner'  >
+        <navigator url='../exam/exam?subject={{subject}}&examType=shunxu'>
+           <view  class='flexColumn' >
+                <image class='.exemTypeImg' src='/images/shunxu.png'></image>
+                <text>顺序练习</text>
+           </view>
+        </navigator>
+         <navigator url='../exam/exam?subject={{subject}}&examType=suiji'>
+            <view  class='flexColumn'>
+                  <image class='.exemTypeImg' src='/images/suiji.png'></image>
+                  <text>随机练习</text>
+            </view>
+         </navigator>
+      </view>
+
+      <view class='flexRow  imgContailner' >
+         <image class='bigImg' src='/images/kj5.png'></image>
+      </view>
+
+      <view class='flexRow  exemTypeContailner'>
+       <view  class='flexColumn  '>
+                  <image class='.exemTypeImg' src='/images/moni.png'></image>
+                  <text>模拟考试</text>
+           </view>
+            <navigator url='../exam/exam?subject={{subject}}&examType=cuoti'>
+            <view  class='flexColumn'>
+                  <image class='.exemTypeImg'  src='/images/cuoti.png'></image>
+                  <text>我的错题</text>
+           </view>
+            </navigator>
+      </view>
+</view>

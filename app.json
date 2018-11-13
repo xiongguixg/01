@@ -1,0 +1,18 @@
+{
+  "pages":[
+         
+      "pages/selectCarType/index",
+      "pages/selectSubject/index",
+      "pages/selectExamType/index",
+        "pages/exam/exam"
+      
+  
+
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "驾考宝典个人版",
+    "navigationBarTextStyle":"black"
+  }
+}

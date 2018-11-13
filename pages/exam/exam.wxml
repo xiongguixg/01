@@ -1,0 +1,75 @@
+<view style='  display:flex;  flex-direction:column; align-items:flex-start;'>
+  <view>
+       <text>{{timu.stem}}</text><text>({{timuType}})</text>
+  </view>
+     <image wx:if="{{timu.imgUrl!=null}}"  style='width750rpx;height:650rpx' src="http://static.rupeng.com/jiakaoimgs{{timu.imgUrl}}"></image>
+     <!-- 多选题 -->
+     <form bindsubmit='formSubmit'>
+      <block wx:if='{{timuType=="多选题"}}'>
+          <checkbox-group  name="duoxuanValue">
+            <view class='flexRow'>
+                <image mode='aspectFill' class='rdImg'     src='/images/btn_radio_select_a.png'>
+                </image>
+                <checkbox id='cbA' value='A' checked='{{crrcheck}}'></checkbox><label for='rdA'>{{timu.item1}}</label>
+            </view>
+              <view class='flexRow'>
+                <image mode='aspectFill' class='rdImg'     src='/images/btn_radio_select_b.png'>
+                </image>
+                <checkbox id='cbB' value='B' checked='{{crrcheck}}'></checkbox><label for='rdB'>{{timu.item2}}</label>
+            </view>
+            <view class='flexRow'>
+                <image mode='aspectFill' class='rdImg'     src='/images/btn_radio_select_c.png'>
+                </image>
+                <checkbox id='cbC' value='C' checked='{{crrcheck}}'></checkbox><label for='rdC'>{{timu.item3}}</label>
+            </view>
+            <view class='flexRow'>
+                <image mode='aspectFill' class='rdImg'     src='/images/btn_radio_select_d.png'>
+                </image>
+                <checkbox id='cbD' value='D' checked='{{crrcheck}}'></checkbox><label for='rdD'>{{timu.item4}}</label>
+            </view>
+            </checkbox-group>
+    </block>
+     <!-- 判断题 -->
+      <block wx:if='{{timuType=="判断题"}}'>
+      <radio-group name="pandunValue">
+        <view class='flexRow'>
+            <radio id='rdDui' value='A' checked='{{crrcheck}}'></radio><label for='rdDui'>正确</label>
+        </view>
+          <view class='flexRow'>
+            <radio id='rdCuo' value='B' checked='{{crrcheck}}'></radio><label for='rdCuo'>错误</label>
+        </view>
+        </radio-group>
+      </block>
+ <!-- 单选题 -->
+     <block wx:if='{{timuType=="单选题"}}'>
+       <radio-group name="danxunValue">
+            <view class='flexRow'>
+                <image mode='aspectFill' class='rdImg'     src='/images/btn_radio_select_a.png'>
+                </image>
+                <radio id='rdA' value='A' checked='{{crrcheck}}'></radio><label for='rdA'>{{timu.item1}}</label>
+            </view>
+              <view class='flexRow'>
+                <image mode='aspectFill' class='rdImg'     src='/images/btn_radio_select_b.png'>
+                </image>
+                <radio id='rdB' value='B' checked='{{crrcheck}}'></radio><label for='rdB'>{{timu.item2}}</label>
+            </view>
+            <view class='flexRow'>
+                <image mode='aspectFill' class='rdImg'     src='/images/btn_radio_select_c.png'>
+                </image>
+                <radio id='rdC' value='C' checked='{{crrcheck}}'></radio><label for='rdC'>{{timu.item3}}</label>
+            </view>
+            <view class='flexRow'>
+                <image mode='aspectFill' class='rdImg'     src='/images/btn_radio_select_d.png'>
+                </image>
+                <radio id='rdD' value='D' checked='{{crrcheck}}'></radio><label for='rdD'>a{{timu.item4}}</label>
+            </view>
+        </radio-group>
+</block>
+        <button style='width:750rpx ' form-type='submit' >提交</button>
+            <view wx:if="{{showAnswer}}" style='width750rpx; display:flex; flex-direction:column'>
+               <text>正确答案：{{answerDesc}}</text>
+               <text>答案解析：{{timu.explains}}</text>
+            </view>
+      </form> 
+       <button  bindtap='gotoNext' style='width:750rpx; margin-top:20rpx' type='primary'>下一题</button>
+</view>

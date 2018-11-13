@@ -1,0 +1,21 @@
+.exemTypeImg
+{
+  width: 80px;
+  height: 80px;
+}
+.bigImg{
+  height: 280px;
+  width: 280px;
+}
+.pageContailner
+{
+align-items:stretch;
+}
+.exemTypeContailner
+{
+justify-content:space-between;
+}
+.imgContailner
+{
+  justify-content:center;
+}

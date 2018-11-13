@@ -1,0 +1,12 @@
+<view class='container'>
+ <text class='desc'>学车第一步,选对题库</text>
+ <text class='selectJSZ'>选择驾驶证
+ </text>
+ <view class='flexRow' >
+      <view class='carContainer' wx:for="{{cars}}" bindtap='carTap' data-model="{{item.model}}" >
+      <image  class='carImg' src='{{item.imgSrc}}'></image>
+      <text>{{item.name}}</text>
+      <text  class='.carTypeModel'>{{item.model}}</text>
+      </view>
+ </view>
+</view>

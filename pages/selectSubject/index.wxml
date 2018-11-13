@@ -1,0 +1,15 @@
+<view class='.flexColumn'> 
+<view  style="width:750rpx;  display:flex; justify-content:flex-end" >
+   <image bindtap='settingTap' style='width:80rpx;height:80rpx' src='/images/setting.png'></image>
+</view>
+   <view class='.flexColumn' bindtap='subjectTap' data-subject="1">
+       <image class='img' src='/images/moni.png'></image>
+       <text>交通理论</text>
+       <text>科目1</text>
+   </view>
+     <view class='.flexColumn' bindtap='subjectTap' data-subject="4">
+       <image class='img' src='/images/rank.png'></image>
+       <text>文明驾驶</text>
+       <text>科目4</text>
+   </view>
+</view>

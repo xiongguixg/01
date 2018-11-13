@@ -1,0 +1,6 @@
+/* pages/selectSubject/index.wxss */
+.img
+{
+  width:200px;
+  height:200px;
+}
